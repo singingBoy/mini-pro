@@ -1,0 +1,1 @@
+[参考](https://github.com/Cap32/wxapp-webpack-plugin/blob/master/src/index.js)
