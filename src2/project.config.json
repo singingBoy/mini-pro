@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wxa66989fc24500197",
-	"projectname": "test",
+	"projectname": "wx-template",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

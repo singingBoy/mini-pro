@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(n,t){var e=function(n){return(n=n.toString())[1]?n:"0"+n};n.exports={formatTime:function(n){var t=n.getFullYear(),o=n.getMonth()+1,r=n.getDate(),i=n.getHours(),a=n.getMinutes(),u=n.getSeconds();return[t,o,r].map(e).join("/")+" "+[i,a,u].map(e).join(":")}}}]]);

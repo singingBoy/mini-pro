@@ -8,7 +8,6 @@
     </block>
   </view>
   <view class="usermotto">
-    <hello></hello>
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>

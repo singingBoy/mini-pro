@@ -2,34 +2,27 @@ import {resolve, parse, join} from 'path';
 import glob from 'glob';
 import {readJsonSync} from 'fs-extra';
 
-export const PAGE_SOURCE = 'src/pages';
+export const SOURCE = 'src';
 export const OUTPUT = 'dist';
 
 export default class BuildUtils {
   constructor() {
     this.pages = getBase();
-    // this.entry = this.getEntry();
+    this.entry = this.getEntry();
   }
 
   getEntry() {
-    const allJsPath = handelFiles(`${PAGE_SOURCE}/**/*.js`);
-
+    const entry = {};
+    this.pages.forEach(page => entry[page] = resolve(`${SOURCE}/${page}`));
+    return entry;
   }
 }
 
 function getBase() {
-  const appJsonPath = glob.sync(`src/app.json`)[0];
-  const {pages = [], subpackages = [], usingComponents = []} = readJsonSync(appJsonPath);
-
-  console.log([
-    'app',
-    ...usingComponents,
-    ...pages,
-    ...subpackages,
-  ]);
+  const appJsonPath = glob.sync(`${SOURCE}/app.json`)[0];
+  const {pages = [], subpackages = []} = readJsonSync(appJsonPath);
   return [
     'app',
-    ...usingComponents,
     ...pages,
     ...subpackages,
   ];

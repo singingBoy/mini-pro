@@ -1,6 +1,7 @@
 import {resolve} from 'path';
 import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 import BuildUtils, {OUTPUT} from './config/config.util';
 
