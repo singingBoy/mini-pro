@@ -19,14 +19,8 @@ export default class BuildUtils {
 
 function getBase() {
   const appJsonPath = glob.sync(`src/app.json`)[0];
-  const {pages = [], subpackages = [], usingComponents = []} = readJsonSync(appJsonPath);
+  const {pages = [], subpackages = [], usingComponents = {}} = readJsonSync(appJsonPath);
 
-  console.log([
-    'app',
-    ...usingComponents,
-    ...pages,
-    ...subpackages,
-  ]);
   return [
     'app',
     ...usingComponents,

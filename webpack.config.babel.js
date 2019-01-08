@@ -3,10 +3,9 @@ import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 import BuildUtils, {OUTPUT} from './config/config.util';
+import WxPlugin from './config/wxPlugin';
 
-const config = new BuildUtils();
 export default {
-  entry: config.entry,
   output: {
     path: resolve(OUTPUT),
     publicPath: '/',
@@ -27,10 +26,7 @@ export default {
   },
   plugins: [
     new CleanWebpackPlugin([OUTPUT]),
-    // new CopyWebpackPlugin([{
-    //   from: 'src/**/*.json',
-    //   to: '',
-    // }]),
+    new WxPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   module: {

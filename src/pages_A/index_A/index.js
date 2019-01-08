@@ -10,7 +10,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    date: formatTime(Date.now()),
+    date: formatTime(new Date()),
     num: formatNumber(11),
   },
   //事件处理函数
