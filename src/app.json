@@ -10,6 +10,6 @@
     "navigationBarTextStyle":"black"
   },
   "usingComponents": {
-    "hello2": "./pages/index/components/hello2/hello"
+    "hello2": "./components/hello/hello"
   }
 }
